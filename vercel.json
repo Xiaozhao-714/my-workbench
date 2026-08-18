@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/mobile", "dest": "/public/workbench-mobile.html" },
+    { "src": "/desktop", "dest": "/public/workbench-desktop.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
